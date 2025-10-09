@@ -6,4 +6,5 @@ void randomChump( std::string name)
 
 	zomp = newZombie(name);
 	zomp->announce();
+	delete zomp;
 }

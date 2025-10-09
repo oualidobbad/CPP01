@@ -1,4 +1,4 @@
-CPP = c++;
+CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = brainz
 SRC = $(wildcard *.cpp)
@@ -7,7 +7,7 @@ OBJ = $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -rf $(OBJ)

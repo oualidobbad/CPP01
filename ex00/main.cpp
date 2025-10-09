@@ -1,6 +1,7 @@
 #include "Zombie.hpp"
 
-int main(){
+int main()
+{
 	randomChump("foo");
 	return 0;
 }

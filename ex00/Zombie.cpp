@@ -15,7 +15,7 @@ std::string Zombie::getName()
 	return this->name;
 }
 
-Zombie::~Zombie(){
-	delete Zombie;
-	cout 
-}
+Zombie::~Zombie()
+{
+	std::cout << this->name + ": clean resources" << std::endl;
+} 
