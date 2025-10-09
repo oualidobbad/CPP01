@@ -14,3 +14,8 @@ std::string Zombie::getName()
 {
 	return this->name;
 }
+
+Zombie::~Zombie(){
+	delete Zombie;
+	cout 
+}
