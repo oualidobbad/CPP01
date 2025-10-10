@@ -22,10 +22,14 @@ void Harl::error()
 
 void Harl::complain(std::string level)
 {
-	void (Harl::*harl[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::map<std::string, void (Harl::*)()> map_fun;
 
-	if (level == "debug")
-		(this->*harl[0])();
+	map_fun["debug"] = &Harl::debug;
+	map_fun["info"] = &Harl::info;
+	map_fun["warning"] = &Harl::warning;
+	map_fun["error"] = &Harl::error;
+
+	(this->*map_fun[level])();
 }
 
 
