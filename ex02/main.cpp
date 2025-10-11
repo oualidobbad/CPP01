@@ -6,6 +6,9 @@ int main()
 
 	std::string *stringPTR = &str;
 	std::string &stringREF = str;
+
+	// std::string *s = &stringREF;
+	// *s = "walid";
 	
 	std::cout <<"=================== Address ====================" << std::endl;
 

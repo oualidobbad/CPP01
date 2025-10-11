@@ -1,10 +1,10 @@
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = violence
+NAME = replace
 SRC = $(wildcard *.cpp)
 OBJ = $(SRC:.cpp=.o)
 
-all: $(NAME)
+all: $(NAME) clean
 
 $(NAME): $(OBJ)
 	$(CPP) -o $@ $^
@@ -13,7 +13,7 @@ $(NAME): $(OBJ)
 	$(CPP) $(CPPFLAGS) -c -o $@ $<
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJ) *.replace
 
 fclean: clean
 	rm -rf $(NAME)
