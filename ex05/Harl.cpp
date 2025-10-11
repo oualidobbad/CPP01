@@ -28,7 +28,11 @@ void Harl::complain(std::string level)
 	map_fun["info"] = &Harl::info;
 	map_fun["warning"] = &Harl::warning;
 	map_fun["error"] = &Harl::error;
-	(this->*map_fun[level])();
+	
+	if (map_fun.count(level))
+		(this->*map_fun[level])();
+	else
+		std::cout << "level: " + level +" not found!" << std::endl;
 }
 
 

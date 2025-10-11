@@ -65,7 +65,7 @@ void Harl::complain(int level)
 			for (int i = level; i < 4; i++)
 				(this->*map_fun[i])();
 			break;
-	
+
 		default:
 			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 			break;

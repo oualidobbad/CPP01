@@ -1,22 +1,6 @@
 #include <iostream>
 #include <fstream>
 
-// #include <bits/stdc++.h>
-// std::string replace(std::string str, std::string s1, std::string s2){
-	
-// 	size_t pos;
-
-// 	start:
-// 		pos = str.find(s1);
-// 		if (pos != std::string::npos){
-// 			str.erase(pos, s1.length());
-// 			str.insert(pos, s2);
-// 			goto start;
-// 		}
-// 	std::cout << str << std::endl;
-// 	return str;
-// }
-
 void replace(std::string& str, std::string s1, std::string s2){
 	
 	size_t pos;
