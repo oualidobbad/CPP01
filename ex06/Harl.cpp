@@ -40,25 +40,30 @@ void Harl::filter_complain(std::string level)
 
 void Harl::complain(int level)
 {
+	std::map<int, void (Harl::*)()> map_fun;
+
+	map_fun[0] = &Harl::debug;
+	map_fun[1] = &Harl::info;
+	map_fun[2] = &Harl::warning;
+	map_fun[3] = &Harl::error;
+
 	switch (level)
 	{
 		case 0:
-			debug();
-			info();
-			warning();
-			error();
+			for (int i = level; i < 4; i++)
+				(this->*map_fun[i])();
 			break;
 		case 1:
-			info();
-			warning();
-			error();
+			for (int i = level; i < 4; i++)
+				(this->*map_fun[i])();
 			break;
 		case 2:
-			warning();
-			error();
+			for (int i = level; i < 4; i++)
+				(this->*map_fun[i])();
 			break;
 		case 3:
-			error();
+			for (int i = level; i < 4; i++)
+				(this->*map_fun[i])();
 			break;
 	
 		default:
