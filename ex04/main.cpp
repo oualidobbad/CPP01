@@ -47,8 +47,12 @@ int main(int ac, char **av)
 	std::string newfile = av[1];
 	newfile	+= ".replace";
 
-	std::fstream filein(av[1], std::ios::in);
-	std::fstream fileout(newfile.c_str(), std::ios::out);
+	std::fstream filein;
+	std::fstream fileout;
+
+	filein.open(av[1], std::ios::in);
+	fileout.open(newfile.c_str(), std::ios::out);
+	
 	if(filesIsOpen(filein, fileout) == false)
 		return 1;
 
