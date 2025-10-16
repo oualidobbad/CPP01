@@ -1,7 +1,7 @@
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = more_brainz
-SRC = $(wildcard *.cpp)
+SRC = main.cpp  Zombie.cpp  zombieHorde.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

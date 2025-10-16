@@ -1,7 +1,7 @@
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = violence
-SRC = $(wildcard *.cpp)
+SRC = HumanA.cpp  HumanB.cpp  main.cpp  Weapon.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

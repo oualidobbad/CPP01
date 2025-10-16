@@ -1,7 +1,7 @@
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = replace
-SRC = $(wildcard *.cpp)
+SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME) clean

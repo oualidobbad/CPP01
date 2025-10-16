@@ -1,7 +1,7 @@
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = ptr_ref
-SRC = $(wildcard *.cpp)
+SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

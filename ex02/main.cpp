@@ -7,9 +7,6 @@ int main()
 	std::string *stringPTR = &str;
 	std::string &stringREF = str;
 
-	// std::string *s = &stringREF;
-	// *s = "walid";
-	
 	std::cout <<"=================== Address ====================" << std::endl;
 
 	std::cout << "Address of string: ";
@@ -21,7 +18,7 @@ int main()
 	std::cout << "Address held by stringREF: ";
 	std::cout << &stringREF<< std::endl;
 
-	std::cout <<"=================== Value ====================" << std::endl;
+	std::cout <<"=================== Value ======================" << std::endl;
 
 	std::cout << "value of string: " + str << std::endl;
 
