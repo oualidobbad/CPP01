@@ -22,17 +22,16 @@ void Harl::error()
 
 void Harl::complain(std::string level)
 {
-	std::map<std::string, void (Harl::*)()> map_fun;
+	void (Harl::*arr[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string levels[4] = {"debug", "info", "warning", "error"};
 
-	map_fun["debug"] = &Harl::debug;
-	map_fun["info"] = &Harl::info;
-	map_fun["warning"] = &Harl::warning;
-	map_fun["error"] = &Harl::error;
-	
-	if (map_fun.count(level))
-		(this->*map_fun[level])();
-	else
-		std::cout << "level: " + level +" not found!" << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		if (level == levels[i])
+		{
+			(this->*arr[i])();
+			return ;
+		}
+	}
+	std::cerr << "level: " + level + " Not found!" << std::endl;
 }
-
-

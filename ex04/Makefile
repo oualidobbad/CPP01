@@ -4,7 +4,7 @@ NAME = replace
 SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
-all: $(NAME) clean
+all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CPP) -o $@ $^
