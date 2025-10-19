@@ -40,12 +40,7 @@ void Harl::filter_complain(std::string level)
 
 void Harl::complain(int level)
 {
-	std::map<int, void (Harl::*)()> map_fun;
-
-	map_fun[0] = &Harl::debug;
-	map_fun[1] = &Harl::info;
-	map_fun[2] = &Harl::warning;
-	map_fun[3] = &Harl::error;
+	void (Harl::*map_fun[4]) (void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
 	switch (level)
 	{
