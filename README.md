@@ -1,22 +1,13 @@
-# CPP01
+    # CPP01
 
-## Description
-C++ module covering memory, references, and pointers.
+    C++ Module 01: memory, references, pointers, and simple class usage (zombies, Harl complaints).
 
-## Features
-- Exercises like zombies and the Harl complaint system.
+    ## Topics
+    - Stack vs heap allocation, references vs pointers.
+    - Basic logging/filter exercises.
 
-## Technologies Used
-- C++98, Makefile.
+    ## Build & Run
+    - `make` per exercise; run the resulting binaries to observe behaviors.
 
-## Installation
-- Run `make` per exercise directory.
-
-## Usage
-- Execute the compiled binaries to test behaviors.
-
-## Example
-- Run the Harl filter demo to see complaint levels printed.
-
-## Author
-- Oualid Obbad (@oualidobbad)
+    ## Author
+    Oualid Obbad (@oualidobbad)
